@@ -1,0 +1,28 @@
+<center><h1>Five Nights at Freddy's Gimmick</h1></center><br>
+<center>By Greenhammerbro</center><br><br>
+
+This gimmick recreates the FNAF mode in which the player must survive for a period of time
+(12AM to 6AM) in order to finish the level (not necessary ending the level, it teleports
+the player out of the &ldquo;FNAF levels&rdquo;).<br><br>
+
+<b>Note:</b> I highly recommend have at least some experience with ASM due to the stabilizability
+being complex, and that you'll likely have to make changes to this. It features viewing other levels,
+layer 3 map interface, and more.<br><br>
+
+What you need:
+<ul>
+<li>[Tool] <a href="https://www.smwcentral.net/?p=section&a=details&id=17500">Gopher Popcorn stew</a></li>
+<li>[Tool] <a href="https://www.smwcentral.net/?p=section&a=details&id=16540">Uberasm tool</a></li>
+<li>[Custom Block] <a href="https://www.smwcentral.net/?p=section&a=details&id=18347">Controller Execute Once blocks</a></li>
+</ul><br><br>
+
+I did include a sample level and other pre-done &ldquo;assets&rdquo; to get an idea on how this works. Key facts:
+<ul>
+<li><b>Timer:</b> A simple 16-bit frame counter that increments. Hits a certain value, and teleports the player to a
+specific level. This is run by Uberasm tool code.</li><br>
+
+<li><b>Power:</b>A 24-bit (3 bytes) value that decrements. Note that this is a fixed-point value; Byte 0 is a fraction out
+of 256, and the other two are the values to be read, therefore its <tt>$xxxx.xx</tt>.</li><br>
+
+
+</ul>
